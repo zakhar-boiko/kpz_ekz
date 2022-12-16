@@ -1,0 +1,63 @@
+table{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    color:#FFFDFB ;
+    background-color: #0881A3 ;
+    padding: 10px 20px;
+    border-radius: 16px;
+    margin-left: 10px;
+}
+
+.table__header,.table__cell{
+    width: auto;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.table__update{
+    background-color: #FFFDFB;
+    padding: 5px 10px;
+    font-size: 28px;
+    color:#0881A3;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.button-add{
+    background-color: #0881A3;
+    padding: 10px 10px;
+    font-size: 28px;
+    color:#FFFDFB;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+th, td{
+    border: 3px solid #FFFDFB;
+}
+.search-bar{
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 2px solid #0881A3;
+    border-radius: 16px;
+    width: 70%;
+    margin: 20px 10px;
+}
+
+.search{
+    font-size: 20px;
+    padding: 5px 5px;
+    border: 2px solid #0881A3;
+    border-radius: 16px;
+    width: 15%;
+    margin: 0 10px;
+    background-color: #0881A3;
+    padding: 10px 10px;
+    font-size: 28px;
+    color:#FFFDFB;
+    border-radius: 16px;
+    cursor: pointer;
+}

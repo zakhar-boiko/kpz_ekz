@@ -1,0 +1,13 @@
+<div class="editing" *ngIf="currentComment">
+    <h2 class="editing__preview">Add comment</h2>
+    <h2 class="editing__preview">{{currentComment.content}} By {{currentComment.author}} </h2>
+    <div class="editing__inputs">
+        Author:
+        <input class="editing__input" [(ngModel)] = "currentComment.author" type="text" placeholder="Author"/>
+        Content:
+        <input class="editing__input content" [(ngModel)] = "currentComment.content" type="text" placeholder="Content"/>
+    </div>
+    <div class="crud-buttons">
+        <button class="update-button" (click)="addComment()">Add comment</button>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="editing" *ngIf="lawCase">
+    <h2 class="editing__preview"> {{lawCase.name}} </h2>
+    <div class="editing__inputs">
+        Name:
+        <input class="editing__input" [(ngModel)] = "lawCase.name" type="text" placeholder="Name"/>
+        <app-edit-document [currentLawCase]="lawCase"></app-edit-document>
+        <app-edit-comment [currentLawCase]="lawCase"></app-edit-comment>
+    </div>
+    <div class="crud-buttons">
+        <button class="update-button" (click)="updateLawCase(lawCase)" *ngIf="lawCase.id" >Update</button>
+        <button class="delete-button" (click)="deleteLawCase(lawCase)" *ngIf="lawCase.id" >Delete</button>
+        <button class="create-button" (click)="createLawCase(lawCase)" *ngIf="!lawCase.id" >Create law case</button>
+    </div>
+
+
+</div>

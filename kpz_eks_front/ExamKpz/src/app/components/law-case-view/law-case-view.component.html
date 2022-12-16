@@ -1,0 +1,33 @@
+<input [(ngModel)]="searchTerm" type="text" class="search-bar" placeholder="Search">
+<button class="search" (click)="searchLawCase()">Search</button>
+<table class="table">
+    <thead>
+      <th class="table__header">Id</th>
+      <th class="table__header">Name</th>
+      <th class="table__header">Documents</th>
+      <th class="table__header">Comments</th>
+      <th class="table__header"></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let lawCase of lawCases">
+        <td class="table__cell">{{ lawCase.id }}</td>
+        <td class="table__cell">{{ lawCase.name }}</td>
+        <td class="table__cell">
+            <div class="p" *ngFor="let document of lawCase.documents">
+                {{document.name}}. {{document.description}} {{document.link}} <br>{{document.date| date:"MM/dd/yy"}} 
+                <br>
+            </div>
+     
+        </td>
+        <td class="table__cell">
+            <div class="p" *ngFor="let comment of lawCase.comments">
+                {{comment.content}} by {{comment.author}}
+            </div>
+        </td>
+        <td class="table__cell"><button class="table__update" (click)="editLawCase(lawCase)" >Update</button></td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <button class="button-add" (click)="initNewLawCase()">Add law case</button>
+  <app-edit-law-case [lawCase]="lawCaseToUpdate" (lawCasesUpdated)="updateLawCaseList($event)"></app-edit-law-case>

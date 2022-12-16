@@ -1,0 +1,43 @@
+
+.editing{
+    margin: 20px 10px;
+}
+.editing__preview{
+    font-size: 30px;
+    color:#0881A3;
+}
+
+.editing__inputs{
+    font-size: 20px;
+    color:#0881A3;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.editing__input{
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 2px solid #0881A3;
+    border-radius: 16px;
+    width: 200px;
+}
+
+.crud-buttons{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.crud-buttons button{
+    background-color: #0881A3;
+    padding: 10px 10px;
+    font-size: 28px;
+    color:#FFFDFB;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 440px;
+    margin-top: 20px;
+}
+.content{
+    width: 500px;
+}

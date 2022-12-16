@@ -1,0 +1,17 @@
+<div class="editing" *ngIf="currentDocument">
+    <h2 class="editing__preview">Add document</h2>
+    <h2 class="editing__preview"> {{currentDocument.name}} </h2>
+    <div class="editing__inputs">
+        Name:
+        <input class="editing__input" [(ngModel)] = "currentDocument.name" type="text" placeholder="Name"/>
+        Link:
+        <input class="editing__input" [(ngModel)] = "currentDocument.description" type="text" placeholder="Link"/>
+        Description:
+        <textarea  [(ngModel)] = "currentDocument.link" placeholder="Description" name="" id="" cols="30" rows="5"></textarea>
+        Date:
+        <input class="editing__input" [(ngModel)] = "currentDocument.date" type="date" />
+    </div>
+    <div class="crud-buttons">
+        <button class="update-button" (click)="addDocument()">Add document</button>
+    </div>
+</div>
